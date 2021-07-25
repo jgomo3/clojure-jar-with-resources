@@ -1,0 +1,4 @@
+{:paths ["src" "classes"]
+ :aliases {:build {:deps {io.github.clojure/tools.build {:git/tag "v0.1.6" :git/sha "5636e61"}}
+                   :ns-default build}
+           :greet {:exec-fn jgomo3.hola/greet}}}
