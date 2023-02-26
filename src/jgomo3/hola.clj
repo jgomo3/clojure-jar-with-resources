@@ -5,7 +5,7 @@
 (defn greet [{:keys [who]}]
   (let [greet-text (-> "hola.txt"
                        io/resource
-                       io/file ;; could be skipped, but the code I'm having problems with does this.
+                       ;; io/file ;; could be skipped, but the code I'm having problems with does this.
                        slurp)]
     (println greet-text (or who "world") "!")))
 

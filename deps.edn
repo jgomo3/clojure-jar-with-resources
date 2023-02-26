@@ -1,4 +1,11 @@
 {:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}}
  :aliases {:build {:deps {io.github.clojure/tools.build {:git/tag "v0.1.6" :git/sha "5636e61"}}
                    :ns-default build}
-           :greet {:exec-fn jgomo3.hola/greet}}}
+           :greet {:exec-fn jgomo3.hola/greet}
+           :uberjar {:deps {com.github.seancorfield/depstar {:mvn/version "2.1.250"}}
+                     :exec-fn hf.depstar/uberjar
+                     :exec-args {:aot true
+                                 :jar "hola.jar"
+                                 :main-class "jgomo3.hola"
+                                 :sync-pom true}}}}
